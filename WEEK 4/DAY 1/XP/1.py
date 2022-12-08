@@ -1,0 +1,1 @@
+print("Hello wolrd\n"*4)
