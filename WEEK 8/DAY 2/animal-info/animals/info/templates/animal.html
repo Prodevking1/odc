@@ -1,0 +1,71 @@
+<!-- 
+
+<div class="container">
+    <h1 style="color: blue">Voici les informations de l'animal {{ animal.id }}</h1>
+  
+    <table class="table">
+      <tr>
+        <td style="color: red">Nombre de pattes :</td>
+        <td>{{ animal.legs }}</td>
+      </tr>
+      <tr>
+        <td style="color: green">Poids :</td>
+        <td>{{ animal.weight }}</td>
+      </tr>
+      <tr>
+        <td style="color: purple">Taille :</td>
+        <td>{{ animal.height }}</td>
+      </tr>
+      <tr>
+        <td style="color: orange">Vitesse :</td>
+        <td>{{ animal.speed }}</td>
+      </tr>
+    </table>
+  </div>
+   -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Mon projet Django</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color: blue">Voici les informations de l'animal {{ animal.id }}</h1>
+
+        <table class="table">
+            <tr>
+                <td style="color: grey">Famille :</td>
+                <td>{{ animal.family.name }}</td>
+            </tr>
+            <tr>
+                <td style="color: red">Nombre de pattes :</td>
+                <td>{{ animal.legs }}</td>
+            </tr>
+            <tr>
+                <td style="color: green">Poids :</td>
+                <td>{{ animal.weight }}</td>
+            </tr>
+            <tr>
+                <td style="color: purple">Taille :</td>
+                <td>{{ animal.height }}</td>
+            </tr>
+            <tr>
+                <td style="color: orange">Vitesse :</td>
+                <td>{{ animal.speed }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
