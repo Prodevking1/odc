@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Détails du location</h1>
+    <p>Client: {{ customer.first_name }} {{ customer.last_name }}</p>
+    <p>Véhicule: {{ vehicle.vehicle_type }}</p>
+    <p>
+        {% if rental.return_date %}
+            Retourné le: {{ rental.return_date }}
+        {% else %}
+            Pas encore retourné
+        {% endif %}
+    </p>
+{% endblock %}

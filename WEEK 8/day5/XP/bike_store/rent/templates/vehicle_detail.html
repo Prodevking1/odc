@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Véhicule {{ vehicle.pk }}</h1>
+    <p>Type : {{ vehicle.vehicle_type }}</p>
+    <p>Taille : {{ vehicle.size }}</p>
+    {% if vehicle.return_date %}
+        <p>Actuellement loué, retour prévu le {{ vehicle.return_date }}</p>
+    {% else %}
+        <p>Actuellement disponible</p>
+    {% endif %}
+{% endblock %}

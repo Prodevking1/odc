@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Liste des véhicules</h1>
+{% for group, vehicles in vehicle_groups %}
+<h2>{{ group }}</h2>
+<ul>
+{% for vehicle in vehicles %}
+<li>{{ vehicle.id }} - {{ vehicle.vehicle_type }}</li>
+{% endfor %}
+</ul>
+{% endfor %}
+
+{% endblock %}

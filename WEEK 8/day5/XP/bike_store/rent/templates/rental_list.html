@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Liste des locations</h1>
+
+  {% for rental in rentals %}
+    <p>
+      {{ rental.customer }} - {{ rental.vehicle }} - {{ rental.rental_date }}
+      {% if rental.return_date %}
+        - {{ rental.return_date }}
+      {% endif %}
+    </p>
+  {% endfor %}
+{% endblock %}
