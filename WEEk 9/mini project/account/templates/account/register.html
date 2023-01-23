@@ -1,0 +1,22 @@
+{% extends 'visitors/homeAdmin.html' %}
+{% block titile %} Register {% endblock titile %}
+{% block content %}
+{% block navbar %}{% endblock navbar %}
+<form method="POST">
+    <div class="card mx-auto my-auto bg-info-100 mb-3" style="width: 55rem;">
+        <h3 class="card-header text-center">Inscription</h3>
+        <div class="card-body">
+            <form method="POST" class="d-flex justify-content-center">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.as_p }}
+                </div>
+                <div class="text-center mt-3">
+                    <button type='submit' class="btn btn-primary">Envoyer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</form>
+
+{% endblock content %}

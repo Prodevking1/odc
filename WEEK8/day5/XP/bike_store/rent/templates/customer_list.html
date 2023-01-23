@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Liste des clients{% endblock %}
+{% block content %}
+<h1>Liste des clients</h1>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customers %}
+            <tr>
+                <td>{{ customer.last_name }}</td>
+                <td>{{ customer.first_name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

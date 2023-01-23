@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-
-{% block content %}
-    <h1>Liste des clients</h1>
-
-    {% for customer in customers %}
-        <p>{{ customer.first_name }} {{ customer.last_name }}</p>
-    {% endfor %}
-{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<form>
+    <div class="form-group">
+        <label for="search-input">Moteur de recherche de tweets</label>
+        <input type="text" class="form-control" id="search-input" aria-describedby="search-input-help">
+        <small id="search-input-help" class="form-text text-muted">Entrer des mots cles</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Rechercher</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="{% url 'generate_fake_data' %}" method="post">
+  {% csrf_token %}
+  <button type="submit" class=" btn btn-primary">Générer des données de test</button>
+</form>
+{% endblock %}
