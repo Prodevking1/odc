@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Welcome to the Phonebook App!</h1>
+    <p>Use the search box above to search for a person by name or phone number.</p>
+
+
+
+    <h2>Available Persons</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in persons %}
+            <tr>
+                <td>{{ person.name }}</td>
+                <td>{{ person.phone_number }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p style="color:red"> Ajouter des personnes d'abord dans admin</p>
+</div>
+{% endblock %}

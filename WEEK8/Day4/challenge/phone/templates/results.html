@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Search Results:</h2>
+    <hr>
+
+    {% if persons %}
+    {% for person in persons %}
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">{{ person.name }}</h5>
+            <p class="card-text">{{ person.phone_number }}</p>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>No results found.</p>
+    {% endif %}
+</div>
+{% endblock %}
